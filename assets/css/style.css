@@ -167,8 +167,8 @@
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-primary: #6366f1;
-    --color-secondary: #8b5cf6;
-    --color-accent: #ec4899;
+    --color-secondary: #6366f1;
+    --color-accent: #6366f1;
     --font-alexandria: "Alexandria", sans-serif;
   }
 }
@@ -2927,6 +2927,30 @@
 }
 .font-cairo {
   font-family: Cairo, sans-serif;
+}
+:root {
+  --font-primary: Tajawal, sans-serif;
+}
+body.font-tajawal {
+  font-family: var(--font-primary);
+}
+.font-option.active {
+  border-color: var(--color-primary);
+}
+.theme-color-option {
+  height: 3rem;
+  border-radius: 0.75rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.theme-color-option.active {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+.theme-color-option.active::after {
+  content: "\2713";
+  color: white;
+  font-size: 1.5rem;
 }
 @keyframes gradient {
   0%,
